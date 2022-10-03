@@ -8,6 +8,16 @@
     <string name="RadioButton">RadioButton</string>
     <string name="SwitchText">What does this do?</string>
     <string name="CheckBox">CheckBox</string>
+    <string name="SwitchOn">Switch is on</string>
+    <string name="SwitchOff">Switch is off</string>
+    <string name="FinishActivityPrompt">Do you want to finish the activity?</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="Response">Here is my response</string>
+    <string name="PermissionRequired">Permission is required to use the camera</string>
+
+
+
 
 
 </resources>
