@@ -15,9 +15,8 @@
     <string name="No">No</string>
     <string name="Response">Here is my response</string>
     <string name="PermissionRequired">Permission is required to use the camera</string>
-
-
-
+    <string name="startChat">Start Chat</string>
+    <string name="MsgSend">-></string>
 
 
 </resources>

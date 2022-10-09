@@ -9,13 +9,15 @@
     <string name="RadioButton">Botao de radio</string>
     <string name="SwitchText">O que isso faz?</string>
     <string name="CheckBox">Caixa de seleção</string>
-    <string name="SwitchOn">Switch is on</string>
-    <string name="SwitchOff">Switch is off</string>
-    <string name="FinishActivityPrompt">Do you want to finish the activity?</string>
-    <string name="Yes">Yes</string>
-    <string name="No">No</string>
-    <string name="Response">Here is my response</string>
-    <string name="PermissionRequired">Permission is required to use the camera</string>
+    <string name="SwitchOn">O interruptor está ligado</string>
+    <string name="SwitchOff">O interruptor está desligado</string>
+    <string name="FinishActivityPrompt">Deseja terminar a atividade?</string>
+    <string name="Yes">Sim</string>
+    <string name="No">Não</string>
+    <string name="Response">Aqui está minha resposta</string>
+    <string name="PermissionRequired">É necessária permissão para usar a câmera</string>
+    <string name="startChat">Iniciar bate-papo</string>
+    <string name="MsgSend">Send</string>
 
 
 

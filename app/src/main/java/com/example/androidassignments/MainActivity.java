@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button;
+    Button button, startChat;
     public static final int REQUEST_CODE = 10;
 
     protected static final String TAG = "MainActivity";
@@ -31,6 +31,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         button = findViewById(R.id.button);
+        startChat = findViewById(R.id.startChat);
+
+        startChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "User clicked Start Chat");
+                Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+                startActivity(intent);
+            }
+        });
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
