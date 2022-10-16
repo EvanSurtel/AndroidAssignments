@@ -84,7 +84,7 @@ public class ChatWindow extends AppCompatActivity {
         }
 
 
-        @Override
+
         public View getView(int position, View convertView, ViewGroup parent){
             LayoutInflater inflater = ChatWindow.this.getLayoutInflater();
             View result = null ;

@@ -43,7 +43,9 @@
 
 
         android:minHeight="48dp"
-        tools:srcCompat="@drawable/ic_camera" />
+
+        android:src="@drawable/ic_camera"
+         />
 
 
 </GridLayout>

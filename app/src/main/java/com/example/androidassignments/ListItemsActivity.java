@@ -28,8 +28,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 public class ListItemsActivity extends AppCompatActivity {
 
 
-        /*private  val CAMERA_PERMISSION_CODE = 1;
-        private const val CAMERA = 2;*/
+
 
     public static final int PERM_CODE = 11;
     public static final int REQUEST_CODE = 10;
@@ -53,16 +52,11 @@ public class ListItemsActivity extends AppCompatActivity {
 
         camera.setOnClickListener(new View.OnClickListener() {
 
-            /*if (ContextCompat.checkSelfPermission(
-                    this,
-                    Manifest.permission.CAMERA
-                    ) ==PackageManager.PERMISSION_GRANTED
-            );*/
+
             @Override
             public void onClick(View v) {
                 askCameraPermissions();
-                /*Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                startActivity(intent);*/
+
             }
         });
 

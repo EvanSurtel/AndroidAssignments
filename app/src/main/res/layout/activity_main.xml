@@ -31,11 +31,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/startChat"
-
-
-
-
         />
+
+    <Button
+        android:id="@+id/tstToolbar"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:text="Test Toolbar" />
 
 
 </LinearLayout>

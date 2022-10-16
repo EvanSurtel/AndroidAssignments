@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, startChat;
+    Button button, startChat, tstToolbar;
     public static final int REQUEST_CODE = 10;
 
     protected static final String TAG = "MainActivity";
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         button = findViewById(R.id.button);
         startChat = findViewById(R.id.startChat);
+        tstToolbar = findViewById(R.id.tstToolbar);
 
         startChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, ChatWindow.class);
                 startActivity(intent);
             }
+
+
         });
 
 
@@ -48,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListItemsActivity.class);
                 startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+
+        tstToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestToolbar.class);
+                startActivity(intent);
             }
         });
 
