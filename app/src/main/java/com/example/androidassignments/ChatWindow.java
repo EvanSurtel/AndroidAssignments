@@ -4,8 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +30,8 @@ public class ChatWindow extends AppCompatActivity {
     EditText msgTxt;
     Button sndBtn;
     ArrayList<String> chats;
+    ChatDatabaseHelper dbHelper;
+
     TextView msgIncoming, msgOutgoing;
 
     @Override
@@ -35,7 +40,8 @@ public class ChatWindow extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_chat_window);
-
+        dbHelper = new ChatDatabaseHelper(this);
+        database = dbHelper.getWritableDatabase();
         listView = findViewById(R.id.chatView);
         msgTxt = findViewById(R.id.msgTxt);
         sndBtn = findViewById(R.id.sndBtn);
@@ -44,15 +50,37 @@ public class ChatWindow extends AppCompatActivity {
         ChatAdapter messageAdapter = new ChatAdapter(this);
         listView.setAdapter( messageAdapter);
 
+        String[] columns = {ChatDatabaseHelper.KEY_MESSAGE};
+        Cursor cursor = database.query(ChatDatabaseHelper.TABLE_NAME, columns, null, null, null, null, null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            chats.add(cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
+            Log.i("ChatWindow.java","SQL_MESSAGE: " + cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
+            cursor.moveToNext();
+        }
+
+        Log.i("ChatWindow.java", "Cursor's column count =" + cursor.getColumnCount());
+
+        for(int i = 0; i<cursor.getColumnCount();i++) {
+            Log.i("ChatWindow.java",cursor.getColumnName(i));
+        }
+
+        cursor.close();
+
+
+
         sndBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 chats.add(msgTxt.getText().toString());
-//                ChatAdapter messageAdapter = new ChatAdapter(ChatWindow.this);
-//                listView.setAdapter(messageAdapter);
+                ContentValues values = new ContentValues();
+                values.put(ChatDatabaseHelper.KEY_MESSAGE,msgTxt.getText().toString());
+                database.inster(ChatDatabaseHelper.TABLE_NAME,null,values);
                 messageAdapter.notifyDataSetChanged();
+
                 msgTxt.setText("");
+
 
 
             }
