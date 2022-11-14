@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,6 +32,7 @@ public class ChatWindow extends AppCompatActivity {
     Button sndBtn;
     ArrayList<String> chats;
     ChatDatabaseHelper dbHelper;
+    SQLiteDatabase database;
 
     TextView msgIncoming, msgOutgoing;
 
