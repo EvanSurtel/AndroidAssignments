@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,6 +32,7 @@ public class ChatWindow extends AppCompatActivity {
     Button sndBtn;
     ArrayList<String> chats;
     ChatDatabaseHelper dbHelper;
+    private SQLiteDatabase database;
 
     TextView msgIncoming, msgOutgoing;
 
@@ -76,7 +78,7 @@ public class ChatWindow extends AppCompatActivity {
                 chats.add(msgTxt.getText().toString());
                 ContentValues values = new ContentValues();
                 values.put(ChatDatabaseHelper.KEY_MESSAGE,msgTxt.getText().toString());
-                database.inster(ChatDatabaseHelper.TABLE_NAME,null,values);
+                database.insert(ChatDatabaseHelper.TABLE_NAME,null,values);
                 messageAdapter.notifyDataSetChanged();
 
                 msgTxt.setText("");

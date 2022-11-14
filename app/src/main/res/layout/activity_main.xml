@@ -39,5 +39,11 @@
         android:layout_height="wrap_content"
         android:text="Test Toolbar" />
 
+    <Button
+        android:id="@+id/WeatherBtn"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:text="Weather Forecast" />
+
 
 </LinearLayout>

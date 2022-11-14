@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button, startChat, tstToolbar;
+    Button button, startChat, tstToolbar, weatherBtn;
     public static final int REQUEST_CODE = 10;
 
     protected static final String TAG = "MainActivity";
@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         startChat = findViewById(R.id.startChat);
         tstToolbar = findViewById(R.id.tstToolbar);
+        weatherBtn = findViewById(R.id.WeatherBtn);
 
         startChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TestToolbar.class);
+                startActivity(intent);
+            }
+        });
+
+        weatherBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WeatherForecast.class);
                 startActivity(intent);
             }
         });
