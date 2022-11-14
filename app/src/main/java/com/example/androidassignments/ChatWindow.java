@@ -78,7 +78,7 @@ public class ChatWindow extends AppCompatActivity {
                 chats.add(msgTxt.getText().toString());
                 ContentValues values = new ContentValues();
                 values.put(ChatDatabaseHelper.KEY_MESSAGE,msgTxt.getText().toString());
-                database.inster(ChatDatabaseHelper.TABLE_NAME,null,values);
+                database.insert(ChatDatabaseHelper.TABLE_NAME,null,values);
                 messageAdapter.notifyDataSetChanged();
 
                 msgTxt.setText("");
