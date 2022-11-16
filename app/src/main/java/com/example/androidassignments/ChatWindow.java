@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
@@ -31,8 +32,10 @@ public class ChatWindow extends AppCompatActivity {
     EditText msgTxt;
     Button sndBtn;
     ArrayList<String> chats;
+    FrameLayout frameLayout;
     ChatDatabaseHelper dbHelper;
     private SQLiteDatabase database;
+
 
     TextView msgIncoming, msgOutgoing;
 
@@ -47,6 +50,8 @@ public class ChatWindow extends AppCompatActivity {
         listView = findViewById(R.id.chatView);
         msgTxt = findViewById(R.id.msgTxt);
         sndBtn = findViewById(R.id.sndBtn);
+        frameLayout = findViewById(R.id.frameLayout);
+        Log.d("ChatWindow.java",Boolean.toString(frameLayout == null));
         chats = new ArrayList<>();
         //ChatAdapter messageAdapter = new ChatAdapter(this, android.R.layout.simple_list_item_1, chats);
         ChatAdapter messageAdapter = new ChatAdapter(this);

@@ -11,19 +11,22 @@
 
     <ListView
         android:id="@+id/chatView"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_width="590dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sndBtn"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_above="@id/sndBtn"></ListView>
+        android:layout_marginEnd="210dp"
+        android:layout_marginBottom="11dp"></ListView>
 
     <EditText
         android:id="@+id/msgTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="461dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginRight="11dp"
         android:layout_toLeftOf="@id/sndBtn"></EditText>
 
     <Button
@@ -32,6 +35,25 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="217dp"
+        android:layout_marginRight="373dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@id/frameLayout"
         android:text="Send"></Button>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="603dp"
+        android:layout_above="@id/sndBtn"
+        android:layout_alignRight="@id/chatView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="956dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="-296dp"
+        android:layout_marginBottom="-49dp"></FrameLayout>
 
 </RelativeLayout>
