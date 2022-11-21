@@ -12,13 +12,14 @@ import androidx.annotation.Nullable;
 public class ChatDatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Messages.db";
     public static final String TABLE_NAME = "MessagesTable";
-    public static final int DATABASE_VERSION = 4;
+    public static final int DATABASE_VERSION = 5;
     public static final String KEY_ID = "_id";
     public static final String KEY_MESSAGE = "message";
     private static final String DATABASE_CREATE = "create table "
             +TABLE_NAME + "(" + KEY_ID
             + " integer primary key autoincrement, " + KEY_MESSAGE
             + " text not null);";
+
     public ChatDatabaseHelper(@Nullable Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }

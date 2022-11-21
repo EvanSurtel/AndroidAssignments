@@ -41,19 +41,28 @@
         android:layout_toLeftOf="@id/frameLayout"
         android:text="Send"></Button>
 
+<!--    <FrameLayout-->
+<!--        android:id="@+id/frameLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="603dp"-->
+<!--        android:layout_above="@id/sndBtn"-->
+<!--        android:layout_alignRight="@id/chatView"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginStart="956dp"-->
+<!--        android:layout_marginTop="-3dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:layout_marginRight="-296dp"-->
+<!--        android:layout_marginBottom="-49dp"></FrameLayout>-->
+
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="0dp"
-        android:layout_height="603dp"
-        android:layout_above="@id/sndBtn"
-        android:layout_alignRight="@id/chatView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="956dp"
-        android:layout_marginTop="-3dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="-296dp"
-        android:layout_marginBottom="-49dp"></FrameLayout>
+        android:layout_width="421dp"
+        android:layout_height="1216dp"
+        android:layout_marginStart="-211dp"
+        android:layout_toEndOf="@id/chatView">
+
+    </FrameLayout>
 
 </RelativeLayout>
